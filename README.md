@@ -2,7 +2,7 @@
 
 * Nick Meyer (@nickmeyer) Co-founder of MileWise, acquired by Yahoo.
 * Pierre Maloka (@pmaloka) Worked on HBO GO, NFL Blitz like a baller.
-* Pulah Shah (@pulahshah) Winner Mashery API PennApps Spring '13.
+* Pulah Shah (@pulahshah) Winner API Prize PennApps Spring '13.
 
 ### PennApps YQL Sample Code
 
