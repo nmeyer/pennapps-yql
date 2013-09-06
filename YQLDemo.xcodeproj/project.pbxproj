@@ -19,6 +19,11 @@
 		FF4C703117DA20BE002549C3 /* YQLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4C703017DA20BE002549C3 /* YQLViewController.m */; };
 		FF4C703417DA20BE002549C3 /* YQLViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4C703217DA20BE002549C3 /* YQLViewController_iPhone.xib */; };
 		FF4C703717DA20BE002549C3 /* YQLViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4C703517DA20BE002549C3 /* YQLViewController_iPad.xib */; };
+		FF4C704117DA473B002549C3 /* bed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF4C703D17DA473B002549C3 /* bed.jpg */; };
+		FF4C704217DA473B002549C3 /* condo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF4C703E17DA473B002549C3 /* condo.jpg */; };
+		FF4C704317DA473B002549C3 /* mustang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF4C703F17DA473B002549C3 /* mustang.jpg */; };
+		FF4C704417DA473B002549C3 /* tv.png in Resources */ = {isa = PBXBuildFile; fileRef = FF4C704017DA473B002549C3 /* tv.png */; };
+		FF4C704817DA4F1C002549C3 /* YQLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4C704717DA4F1C002549C3 /* YQLTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,12 @@
 		FF4C703017DA20BE002549C3 /* YQLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQLViewController.m; sourceTree = "<group>"; };
 		FF4C703317DA20BE002549C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/YQLViewController_iPhone.xib; sourceTree = "<group>"; };
 		FF4C703617DA20BE002549C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/YQLViewController_iPad.xib; sourceTree = "<group>"; };
+		FF4C703D17DA473B002549C3 /* bed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bed.jpg; sourceTree = "<group>"; };
+		FF4C703E17DA473B002549C3 /* condo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = condo.jpg; sourceTree = "<group>"; };
+		FF4C703F17DA473B002549C3 /* mustang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mustang.jpg; sourceTree = "<group>"; };
+		FF4C704017DA473B002549C3 /* tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tv.png; sourceTree = "<group>"; };
+		FF4C704617DA4F1C002549C3 /* YQLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQLTableViewController.h; sourceTree = "<group>"; };
+		FF4C704717DA4F1C002549C3 /* YQLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQLTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 		FF4C700B17DA20BE002549C3 = {
 			isa = PBXGroup;
 			children = (
+				FF4C704517DA473F002549C3 /* Images */,
 				FF4C701D17DA20BE002549C3 /* YQLDemo */,
 				FF4C701617DA20BE002549C3 /* Frameworks */,
 				FF4C701517DA20BE002549C3 /* Products */,
@@ -92,6 +104,8 @@
 				FF4C703217DA20BE002549C3 /* YQLViewController_iPhone.xib */,
 				FF4C703517DA20BE002549C3 /* YQLViewController_iPad.xib */,
 				FF4C701E17DA20BE002549C3 /* Supporting Files */,
+				FF4C704617DA4F1C002549C3 /* YQLTableViewController.h */,
+				FF4C704717DA4F1C002549C3 /* YQLTableViewController.m */,
 			);
 			path = YQLDemo;
 			sourceTree = "<group>";
@@ -108,6 +122,17 @@
 				FF4C702D17DA20BE002549C3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF4C704517DA473F002549C3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FF4C703D17DA473B002549C3 /* bed.jpg */,
+				FF4C703E17DA473B002549C3 /* condo.jpg */,
+				FF4C703F17DA473B002549C3 /* mustang.jpg */,
+				FF4C704017DA473B002549C3 /* tv.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +193,10 @@
 				FF4C702E17DA20BE002549C3 /* Default-568h@2x.png in Resources */,
 				FF4C703417DA20BE002549C3 /* YQLViewController_iPhone.xib in Resources */,
 				FF4C703717DA20BE002549C3 /* YQLViewController_iPad.xib in Resources */,
+				FF4C704117DA473B002549C3 /* bed.jpg in Resources */,
+				FF4C704217DA473B002549C3 /* condo.jpg in Resources */,
+				FF4C704317DA473B002549C3 /* mustang.jpg in Resources */,
+				FF4C704417DA473B002549C3 /* tv.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +210,7 @@
 				FF4C702417DA20BE002549C3 /* main.m in Sources */,
 				FF4C702817DA20BE002549C3 /* YQLAppDelegate.m in Sources */,
 				FF4C703117DA20BE002549C3 /* YQLViewController.m in Sources */,
+				FF4C704817DA4F1C002549C3 /* YQLTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +343,7 @@
 				FF4C703C17DA20BE002549C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

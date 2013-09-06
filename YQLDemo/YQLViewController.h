@@ -10,4 +10,10 @@
 
 @interface YQLViewController : UIViewController
 
+@property (nonatomic) IBOutlet UIImageView *aptImageView;
+@property (nonatomic) IBOutlet UIImageView *carImageView;
+@property (nonatomic) IBOutlet UIImageView *tvImageView;
+@property (nonatomic) IBOutlet UIImageView *bedImageView;
+
+
 @end

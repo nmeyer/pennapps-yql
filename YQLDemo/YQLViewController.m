@@ -7,6 +7,7 @@
 //
 
 #import "YQLViewController.h"
+#import "YQLTableViewController.h"
 
 @interface YQLViewController ()
 
@@ -14,22 +15,29 @@
 
 @implementation YQLViewController
 
+YQLTableViewController *_tableView;
+UISwipeGestureRecognizer *_swipeGesture;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+//    Example YQL Query:
     
-    NSString *yqlQuery = @"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20craigslist.search%20where%20location%3D%22newyork%22%20and%20type%3D%22sss%22%20and%20query%3D%22mustang%20convertable%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
-    
-    NSDictionary *results = [self downloadJSON:yqlQuery];
-    
-    NSLog(@"Got JSON:");
-    NSLog(@"%@", results);
+//    NSString *yqlQuery = @"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20craigslist.search%20where%20location%3D%22newyork%22%20and%20type%3D%22sss%22%20and%20query%3D%22mustang%20convertable%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
+//    
+//    NSDictionary *results = [self downloadJSON:yqlQuery];
+//    
+//    NSLog(@"Got JSON:");
+//    NSLog(@"%@", results);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
+
+#pragma mark - YQL
 
 - (NSDictionary *)downloadJSON:(NSString *)query
 {
@@ -51,6 +59,73 @@
     }
     
     return jsonDictionary;
+}
+
+#pragma mark - Results Table
+
+- (void)presentResults:(NSDictionary *)results {
+    _tableView = [[YQLTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    _tableView.items = results[@"query"][@"results"][@"RDF"][@"item"];
+    
+    [self presentViewController:_tableView animated:YES completion:nil];
+    
+    _swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
+    [_tableView.view addGestureRecognizer:_swipeGesture];
+}
+
+- (void)back {
+    [_tableView dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Gestures
+
+- (IBAction)carTapped:(id)sender {
+    NSLog(@"Car");
+    NSString *yqlQuery = @"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20craigslist.search%20where%20location%3D%22newyork%22%20and%20type%3D%22sss%22%20and%20query%3D%22mustang%20convertable%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
+    
+    NSDictionary *results = [self downloadJSON:yqlQuery];
+    
+    NSLog(@"Got JSON:");
+    NSLog(@"%@", results);
+
+    [self presentResults:results];
+}
+
+- (IBAction)aptTapped:(id)sender {
+    NSLog(@"Apt");
+    NSString *yqlQuery = @"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20craigslist.search%20where%20location%3D%22newyork%22%20and%20type%3D%22nfa%22and%20query%3D%22studio%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
+    
+    NSDictionary *results = [self downloadJSON:yqlQuery];
+    
+    NSLog(@"Got JSON:");
+    NSLog(@"%@", results);
+    
+    [self presentResults:results];
+}
+
+- (IBAction)bedTapped:(id)sender {
+    NSLog(@"Bed");
+    NSString *yqlQuery = @"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20craigslist.search%20where%20location%3D%22newyork%22%20and%20type%3D%22sss%22and%20query%3D%22bed%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
+    
+    NSDictionary *results = [self downloadJSON:yqlQuery];
+    
+    NSLog(@"Got JSON:");
+    NSLog(@"%@", results);
+    
+    [self presentResults:results];
+}
+
+- (IBAction)tvTapped:(id)sender {
+    NSLog(@"TV");
+    NSString *yqlQuery = @"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20craigslist.search%20where%20location%3D%22newyork%22%20and%20type%3D%22sss%22and%20query%3D%22flat%20screen%20tv%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
+    
+    NSDictionary *results = [self downloadJSON:yqlQuery];
+    
+    NSLog(@"Got JSON:");
+    NSLog(@"%@", results);
+    
+    [self presentResults:results];
 }
 
 @end
